@@ -9,11 +9,12 @@ class Tamagotchi
   end
 
   def is_alive
-    if @food_level > 0
-      true
-    end
+    @food_level > 0 ? true : false
   end
 
+  def set_food_level(number)
+    @food_level = number
+  end
 end
 
 
