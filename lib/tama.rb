@@ -9,7 +9,11 @@ class Tamagotchi
   end
 
   def is_alive
-
-  end  
+    if @food_level > 0
+      true
+    end
+  end
 
 end
+
+
