@@ -6,6 +6,10 @@ class Tamagotchi
     @food_level = 10
     @sleep_level = 10
     @activity_level = 10
-
   end
+
+  def is_alive
+
+  end  
+
 end
