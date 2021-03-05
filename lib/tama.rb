@@ -24,6 +24,14 @@ class Tamagotchi
     @@nest[self.id] = Tamagotchi.new(self.name, self.id)
   end
 
+  def kill
+    @@nest = {}
+  end
+
+  def feed
+    self.food_level += 1
+  end
+
   def self.all
     @@nest.values()
   end

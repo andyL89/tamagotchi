@@ -4,4 +4,11 @@
 <h4>Sleep level: <%= @sleep_level %></h4>
 <h4>Activity level: <%= @activity_level %></h4>
 
-<a href="/tamagotchi">Refresh</a>
+<a href="/tamagotchi">Refresh</a><br>
+<a href="/">Back to home page</a>
+
+
+<form action ="/tamagotchi" method ="post">
+  <input name="_method" type="hidden" value="patch">
+  <button type="submit">Feed!</button>
+</form>

@@ -2,8 +2,19 @@
 
 <form action="/tamagotchi" method="post">
   <div class="form-group">
-    <label for="name">Enter your Tamagotchi name:</label>
-    <input type="text" id="name" name="name" placeholder="name">
+    <label for="name">Create a new Tamagotchi:</label>
+    <input type="text" id="name" name="name" placeholder="name" required>
   </div>
   <button type="submit" class="btn">Birth my Tamagotchi!</button>
 </form>
+
+<h3>Here are all the hopefully active tamagotchis!</h3>
+<% if @tamagotchis.any? %>
+  <ul>
+    <% @tamagotchis.each do |tama| %>
+      <li><%= tama.name %></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>There aren't any Tamagotchis in the nest, you should make one!</p>
+<% end %>
